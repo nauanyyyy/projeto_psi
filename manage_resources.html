@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Gerenciar Recursos{% endblock %}
+{% block content %}
+<div class="div">
+    <div class="div1">
+        <h1>Gerenciar Recursos</h1>
+        <p>Aqui você pode adicionar, editar ou remover recursos.</p>
+        <a href="{{ url_for('add_resource') }}">Adicionar Recurso</a>
+        <ul>
+            {% for resource in resources %}
+            <li>{{ resource.name }} - <a href="{{ url_for('edit_resource', id=resource.id) }}">Editar</a> | <a href="{{ url_for('delete_resource', id=resource.id) }}">Excluir</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
