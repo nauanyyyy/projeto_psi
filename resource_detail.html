@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Detalhes do Recurso{% endblock %}
+{% block content %}
+<div class="div">
+    <div class="div1">
+        <h1>Detalhes do Recurso</h1>
+        <p><strong>Nome:</strong> {{ resource.name }}</p>
+        <p><strong>Categoria:</strong> {{ resource.category }}</p>
+        <a href="{{ url_for('list_resources') }}">Voltar à lista de recursos</a>
+    </div>
+</div>
+{% endblock %}
